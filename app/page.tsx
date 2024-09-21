@@ -35,7 +35,7 @@ const Home = () => {
     {
       title: 'Laika',
       logo: laikaLogo.src,
-      description: 'Plataforma en línea que ofrece productos y servicios para animales domésticos...',
+      description: 'Laika es una plataforma en línea que ofrece productos y servicios para animales domésticos, como alimentos, juguetes, medicamentos, accesorios, y productos de higiene.',
       location: 'Presentes en Colombia, México y Chile',
       siteLink: 'https://www.laika.com.co',
       images: [laika1, laika2, laika3],
@@ -43,7 +43,7 @@ const Home = () => {
     {
       title: 'Precompro',
       logo: precomproLogo.src,
-      description: 'Precompro.com es una plataforma en línea que permite a los usuarios hacer reservas...',
+      description: 'Precompro.com es una plataforma en línea que permite a los usuarios hacer reservas y realizar precompras en diversos restaurantes. A través de esta plataforma, los clientes pueden pagar anticipadamente por productos o servicios antes de que estén disponibles, asegurando su compra.',
       location: 'Presentes en distintas partes del mundo, activamente en Colombia',
       siteLink: 'https://marea.precompro.com',
       images: [precompro1, precompro2, precompro3],
@@ -51,7 +51,7 @@ const Home = () => {
     {
       title: 'Gigflow',
       logo: gigflowLogo.src,
-      description: 'Gigflow es una empresa fundada en 2020 que desarrolla sistemas de automatización...',
+      description: 'Gigflow es una empresa fundada en 2020 que desarrolla sistemas de automatización inteligente diseñados para freelancers creativos. Su tecnología permite integrar clientes, proyectos y procesos, utilizando bots inteligentes para encontrar, gestionar y automatizar el onboarding de clientes, lo que facilita a los freelancers la administración de su negocio y la aceleración de su crecimiento.',
       location: 'Plataforma fuera de servicio',
       siteLink: null, // Indica que el sitio está fuera de servicio
       images: [gigflow1, gigflow2],
