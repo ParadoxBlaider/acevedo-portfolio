@@ -24,7 +24,6 @@ import precomproLogo from '@/assets/home/precompro/precompro-logo.png';
 // Gigflow
 import gigflow1 from '@/assets/home/gigflow/gigflow1.jpg';
 import gigflow2 from '@/assets/home/gigflow/gigflow2.jpg';
-import gigflow3 from '@/assets/home/gigflow/gigflow3.jpg';
 import gigflowLogo from '@/assets/home/gigflow/gigflow-logo.svg';
 
 
