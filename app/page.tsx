@@ -33,14 +33,13 @@ const Home = () => {
     <Layout>
       <Section
         customClassName="pb-10 px-10 lg:px-44 section-about-me"
-        title='Desarrollador FrontEnd Colombiano'
+        title='Desarrollador FrontEnd'
         content='
           Con más de 4 años, me especializo en el diseño de interfaces, dedicado a crear experiencias visuales que son tanto amigables como atractivas. Utilizando herramientas como Zeppelin, Figma, etc...
           Me aseguro de que cada proyecto refleje con precisión la visión original.
           Trabajo con empresas de todos los sectores, y mi compromiso es transformar tus ideas en soluciones que resalten y conecten con los usuarios. 
           ¡Estoy emocionado de colaborar contigo en tu próximo proyecto!.
         '
-        image={colFlag}
       />
       <div className='bg-[#172230] overflow-hidden'>
         <h2 className='text-white text-center my-5 pb-3 text-4xl italic border-[#505085] border-b-4 w-fit mx-auto'>Habilidades</h2>
