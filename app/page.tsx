@@ -10,21 +10,21 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 import colFlag from '@/assets/col-flag.png';
 // Laika
-import laika1 from '../assets/home/laika/laika1.jpg';
-import laika2 from '../assets/home/laika/laika2.jpg';
-import laika3 from '../assets/home/laika/laika3.jpg';
-import laikaLogo from '../assets/home/laika/laika-logo.png';
+import laika1 from '@/assets/home/laika/laika1.jpg';
+import laika2 from '@/assets/home/laika/laika2.jpg';
+import laika3 from '@/assets/home/laika/laika3.jpg';
+import laikaLogo from '@/assets/home/laika/laika-logo.png';
 
 // Precompro
-import precompro1 from '../assets/home/precompro/precompro1.jpg';
-import precompro2 from '../assets/home/precompro/precompro2.jpg';
-import precompro3 from '../assets/home/precompro/precompro3.jpg';
-import precomproLogo from '../assets/home/precompro/precompro-logo.png';
+import precompro1 from '@/assets/home/precompro/precompro1.jpg';
+import precompro2 from '@/assets/home/precompro/precompro2.jpg';
+import precompro3 from '@/assets/home/precompro/precompro3.jpg';
+import precomproLogo from '@/assets/home/precompro/precompro-logo.png';
 
 // Gigflow
-import gigflow1 from '../assets/home/gigflow/gigflow1.jpg';
-import gigflow2 from '../assets/home/gigflow/gigflow2.jpg';
-import gigflowLogo from '../assets/home/gigflow/gigflow-logo.svg';
+import gigflow1 from '@/assets/home/gigflow/gigflow1.jpg';
+import gigflow2 from '@/assets/home/gigflow/gigflow2.jpg';
+import gigflowLogo from '@/assets/home/gigflow/gigflow-logo.svg';
 
 
 
