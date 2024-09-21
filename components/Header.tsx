@@ -7,7 +7,11 @@ const Header = () => {
     <header>
       <nav>
         <ul className="text-center md:text-end">
-          <li><Link className='inline-flex gap-3 items-center text-2xl ' href="https://wa.me/+573154846388"><FontAwesomeIcon icon={faCoffee} className="h-7 blinking-icon"/><span>Contáctame</span></Link></li>
+          <li className=''>
+            <Link className='inline-flex gap-3 items-center text-lg border-2 border-[#233449] rounded-full text-[#233449] p-4' href="https://wa.me/+573154846388">
+              <FontAwesomeIcon icon={faCoffee} className="h-5 blinking-icon"/><span>Contáctame</span>
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>

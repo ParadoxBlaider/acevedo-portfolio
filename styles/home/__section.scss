@@ -1,31 +1,63 @@
-@keyframes wave {
-  0% {
+@keyframes bannerInfinite {
+  from{
     transform: translateX(0);
   }
-  50% {
-    transform: translateX(-20px);
-  }
-  100% {
-    transform: translateX(0);
+  to{
+    transform: translateX(-100%);
   }
 }
 
-.section-about-me{
-  text-align: center;
-  display: grid;
-  gap: 10px;
-  h2{
-    font-size: 40px;
+.animation-infinite-axis-x {
+  animation: 20s bannerInfinite infinite linear;
+  white-space: nowrap;
+}
+
+.section{
+  &-about-me{
+    @apply pb-10 px-10 lg:px-40 text-center grid gap-6;
+    h2{
+      @apply text-[40px];
+    }
+    p{
+      @apply text-base md:text-[20px];
+    }
   }
-  p{
-    font-size: 20px;
+  &-skills, &-contact-me{
+    @apply bg-[#172230] overflow-hidden
   }
-  img.general-flags{
-    display: inline-block; /* Permite que la animación funcione correctamente */
-    animation: wave 1.5s ease-in-out infinite; /* Ajusta la duración y suavidad */
-    transform-origin: center;
-    width: 200px;
-    margin: 0 auto;
-    margin-top: 20px;
+  &-skills{
+    h2{
+      @apply text-white text-center pt-5 pb-3 text-4xl italic border-[#505085] border-b-4 w-fit mx-auto
+    }
+    &__info{
+      @apply inline-flex items-center w-max whitespace-nowrap overflow-hidden animation-infinite-axis-x gap-10;
+      &__logos{
+        @apply max-w-fit text-white text-center gap-3 justify-center p-5;
+        h3{
+          @apply mt-3;
+        }
+      }
+    }
+  }
+  &-my-job{
+    @apply pb-10 md:px-10 lg:px-40;
+    h2{
+      @apply text-center pt-5 pb-3 text-4xl italic border-[#505085] border-b-4 w-fit mx-auto;
+    }
+    &__info{
+      @apply mt-4;
+      &__container{
+        @apply md:flex gap-8 w-full mb-10;
+        &__jobs-preview{
+          @apply mb-10 md:mb-0 md:w-2/4 content-center;
+        }
+        &__jobs-detail{
+          @apply md:w-2/4 text-center grid gap-5 content-center justify-items-center;
+        }
+      }
+    }
+  }
+  &-contact-me{
+    @apply text-center text-white py-8
   }
 }
