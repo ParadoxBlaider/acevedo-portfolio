@@ -58,6 +58,6 @@
     }
   }
   &-contact-me{
-    @apply text-center text-white py-8
+    @apply text-center text-white py-8 grid justify-items-center gap-4;
   }
 }

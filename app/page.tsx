@@ -6,9 +6,9 @@ import { Swiper, SwiperSlide,  } from 'swiper/react';
 import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faCoffee, faMailBulk } from '@fortawesome/free-solid-svg-icons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
-import colFlag from '@/assets/col-flag.png';
 // Laika
 import laika1 from '@/assets/home/laika/laika-1.jpg';
 import laika2 from '@/assets/home/laika/laika-2.jpg';
@@ -136,7 +136,17 @@ const Home = () => {
         </div>
       </section>
       <section className='section-contact-me'>
-        <Link className='inline-flex gap-3 items-center text-2xl' href="https://wa.me/+573154846388"><FontAwesomeIcon icon={faCoffee} className="h-7 blinking-icon"/><span>Más proyectos? Contáctame!</span></Link>
+        <div className='text-2xl gap-3 items-center inline-flex'>
+          <FontAwesomeIcon icon={faCoffee} className="h-6 blinking-icon"/><span>Más proyectos? Contáctame!</span>
+        </div>
+        <div className='flex gap-4'>
+          <Link className='inline-flex gap-3 items-center text-2xl' href="https://wa.me/+573154846388">
+            <FontAwesomeIcon icon={faWhatsapp} />
+          </Link>
+          <Link className='inline-flex gap-3 items-center text-2xl' href="mailto:maacevedog2010@gmail.com">
+            <FontAwesomeIcon icon={faMailBulk} />
+          </Link>
+        </div>
       </section>
     </Layout>
   );
