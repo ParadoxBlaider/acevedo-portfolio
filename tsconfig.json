@@ -12,14 +12,18 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["*"]
+    },
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "paths": {
+    /* "paths": {
       "@/*": ["./*"]
-    }
+    } */
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "pages/404.js"],
   "exclude": ["node_modules"]
