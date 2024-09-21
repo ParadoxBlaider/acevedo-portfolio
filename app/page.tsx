@@ -1,101 +1,165 @@
-import Image from "next/image";
+"use client";
+import Section from '@/components/home/Section';
+import '@/styles/main.scss';
+import Layout from '@/components/Layout';
+import { Swiper, SwiperSlide,  } from 'swiper/react';
+import { Pagination, Autoplay, Navigation } from 'swiper/modules';
+import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
-export default function Home() {
+import colFlag from '@/assets/col-flag.png';
+// Laika
+import laika1 from '@/assets/home/laika/laika1.jpg';
+import laika2 from '@/assets/home/laika/laika2.jpg';
+import laika3 from '@/assets/home/laika/laika3.jpg';
+import laikaLogo from '@/assets/home/laika/laika-logo.png';
+
+// Precompro
+import precompro1 from '@/assets/home/precompro/precompro1.jpg';
+import precompro2 from '@/assets/home/precompro/precompro2.jpg';
+import precompro3 from '@/assets/home/precompro/precompro3.jpg';
+import precomproLogo from '@/assets/home/precompro/precompro-logo.png';
+
+// Gigflow
+import gigflow1 from '@/assets/home/gigflow/gigflow1.jpg';
+import gigflow2 from '@/assets/home/gigflow/gigflow2.jpg';
+import gigflow3 from '@/assets/home/gigflow/gigflow3.jpg';
+import gigflowLogo from '@/assets/home/gigflow/gigflow-logo.svg';
+
+
+
+const Home = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <Layout>
+      <Section
+        customClassName="pb-10 px-10 lg:px-44 section-about-me"
+        title='Desarrollador FrontEnd Colombiano'
+        content='
+          Me especializo en el diseño de interfaces, dedicado a crear experiencias visuales que son tanto amigables como atractivas. Utilizando herramientas como Zeppelin, Figma, etc...
+          Me aseguro de que cada proyecto refleje con precisión la visión original.
+          Trabajo con empresas de todos los sectores, y mi compromiso es transformar tus ideas en soluciones que resalten y conecten con los usuarios. 
+          ¡Estoy emocionado de colaborar contigo en tu próximo proyecto!.
+        '
+        image={colFlag}
+      />
+      <div className='bg-[#172230] overflow-hidden'>
+        <h2 className='text-white text-center my-5 pb-3 text-4xl italic border-[#505085] border-b-4 w-fit mx-auto'>Habilidades</h2>
+        <div className='flex-wrap flex items-center justify-around animation-infinite-axis-x'>
+          <div className='text-white text-center grid gap-3 justify-center p-5'>
+            <svg className="" width="80" height="80" viewBox="-10.5 -9.45 21 18.9" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="0" cy="0" r="2" fill="currentColor"></circle><g stroke="currentColor" stroke-width="1" fill="none"><ellipse rx="10" ry="4.5"></ellipse><ellipse rx="10" ry="4.5" transform="rotate(60)"></ellipse><ellipse rx="10" ry="4.5" transform="rotate(120)"></ellipse></g></svg>
+            <h3 className="">ReactJS</h3>
+          </div>
+          <div className='text-white text-center grid gap-3 justify-center p-5'>
+            <svg aria-label="Next.js logotype" height="30" role="img" viewBox="0 0 394 79"><path d="M261.919 0.0330722H330.547V12.7H303.323V79.339H289.71V12.7H261.919V0.0330722Z" fill="#fff"></path><path d="M149.052 0.0330722V12.7H94.0421V33.0772H138.281V45.7441H94.0421V66.6721H149.052V79.339H80.43V12.7H80.4243V0.0330722H149.052Z" fill="#fff"></path><path d="M183.32 0.0661486H165.506L229.312 79.3721H247.178L215.271 39.7464L247.127 0.126654L229.312 0.154184L206.352 28.6697L183.32 0.0661486Z" fill="#fff"></path><path d="M201.6 56.7148L192.679 45.6229L165.455 79.4326H183.32L201.6 56.7148Z" fill="#fff"></path><path clip-rule="evenodd" d="M80.907 79.339L17.0151 0H0V79.3059H13.6121V16.9516L63.8067 79.339H80.907Z" fill="#fff" fill-rule="evenodd"></path><path d="M333.607 78.8546C332.61 78.8546 331.762 78.5093 331.052 77.8186C330.342 77.1279 329.991 76.2917 330 75.3011C329.991 74.3377 330.342 73.5106 331.052 72.8199C331.762 72.1292 332.61 71.7838 333.607 71.7838C334.566 71.7838 335.405 72.1292 336.115 72.8199C336.835 73.5106 337.194 74.3377 337.204 75.3011C337.194 75.9554 337.028 76.5552 336.696 77.0914C336.355 77.6368 335.922 78.064 335.377 78.373C334.842 78.6911 334.252 78.8546 333.607 78.8546Z" fill="#fff"></path><path d="M356.84 45.4453H362.872V68.6846C362.863 70.8204 362.401 72.6472 361.498 74.1832C360.585 75.7191 359.321 76.8914 357.698 77.7185C356.084 78.5364 354.193 78.9546 352.044 78.9546C350.079 78.9546 348.318 78.6001 346.75 77.9094C345.182 77.2187 343.937 76.1826 343.024 74.8193C342.101 73.456 341.649 71.7565 341.649 69.7207H347.691C347.7 70.6114 347.903 71.3838 348.29 72.0291C348.677 72.6744 349.212 73.1651 349.895 73.5105C350.586 73.8559 351.38 74.0286 352.274 74.0286C353.243 74.0286 354.073 73.8286 354.746 73.4196C355.419 73.0197 355.936 72.4199 356.296 71.6201C356.646 70.8295 356.831 69.8479 356.84 68.6846V45.4453Z" fill="#fff"></path><path d="M387.691 54.5338C387.544 53.1251 386.898 52.0254 385.773 51.2438C384.638 50.4531 383.172 50.0623 381.373 50.0623C380.11 50.0623 379.022 50.2532 378.118 50.6258C377.214 51.0075 376.513 51.5164 376.033 52.1617C375.554 52.807 375.314 53.5432 375.295 54.3703C375.295 55.061 375.461 55.6608 375.784 56.1607C376.107 56.6696 376.54 57.0968 377.103 57.4422C377.656 57.7966 378.274 58.0874 378.948 58.3237C379.63 58.56 380.313 58.76 380.995 58.9236L384.14 59.6961C385.404 59.9869 386.631 60.3778 387.802 60.8776C388.973 61.3684 390.034 61.9955 390.965 62.7498C391.897 63.5042 392.635 64.413 393.179 65.4764C393.723 66.5397 394 67.7848 394 69.2208C394 71.1566 393.502 72.8562 392.496 74.3285C391.491 75.7917 390.043 76.9369 388.143 77.764C386.252 78.582 383.965 79 381.272 79C378.671 79 376.402 78.6002 374.493 77.8004C372.575 77.0097 371.08 75.8463 370.001 74.3194C368.922 72.7926 368.341 70.9294 368.258 68.7391H374.235C374.318 69.8842 374.687 70.8386 375.314 71.6111C375.95 72.3745 376.78 72.938 377.795 73.3197C378.819 73.6923 379.962 73.8832 381.226 73.8832C382.545 73.8832 383.707 73.6832 384.712 73.2924C385.708 72.9016 386.492 72.3564 387.055 71.6475C387.627 70.9476 387.913 70.1206 387.922 69.1754C387.913 68.312 387.654 67.5939 387.156 67.0304C386.649 66.467 385.948 65.9944 385.053 65.6127C384.15 65.231 383.098 64.8856 381.899 64.5857L378.081 63.6223C375.323 62.9225 373.137 61.8592 371.541 60.4323C369.937 59.0054 369.143 57.115 369.143 54.7429C369.143 52.798 369.678 51.0894 370.758 49.6261C371.827 48.1629 373.294 47.0268 375.148 46.2179C377.011 45.4 379.114 45 381.456 45C383.836 45 385.92 45.4 387.719 46.2179C389.517 47.0268 390.929 48.1538 391.952 49.5897C392.976 51.0257 393.511 52.6707 393.539 54.5338H387.691Z" fill="#fff"></path></svg>
+          </div>
+          <div className='text-white text-center grid gap-3 justify-center p-5'>
+            <svg  viewBox="0 0 128 128" width="80" height="80" data-v-62c2168e=""><path fill="#42b883" d="M78.8,10L64,35.4L49.2,10H0l64,110l64-110C128,10,78.8,10,78.8,10z" data-v-62c2168e=""></path><path fill="#35495e" d="M78.8,10L64,35.4L49.2,10H25.6L64,76l38.4-66H78.8z" data-v-62c2168e=""></path></svg>
+            <h3 className="">VueJS</h3>
+          </div>
+          <div className='text-white text-center grid gap-3 justify-center p-5'>
+            <img width={80} height={80} src="https://laravel.com/img/logomark.min.svg" alt="" />
+            <h3 className="">Laravel</h3>
+          </div>
+          <div className='text-white text-center grid gap-3 justify-center p-5'>
+            <div className='w-[80px] h-[80px] bg-white flex items-center p-2 rounded-2xl'>
+              <img width={80} height={80} src="https://www.php.net/images/logos/php-logo.svg" alt="" />
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+      <div className='pb-10 md:px-10 lg:px-44'>
+        <h2 className='text-center my-5 pb-3 text-4xl italic border-[#505085] border-b-4 w-fit mx-auto'>Mi trabajo</h2>
+        <div className=''>
+          <div className='md:flex gap-8 w-full mb-10'>
+            <div className='mb-10 md:mb-0 md:w-2/4 content-center'>
+              <Swiper
+                pagination={{
+                  dynamicBullets: true,
+                  clickable: true
+                }}
+                autoplay={{
+                  delay: 4500,
+                  disableOnInteraction: false
+                }}
+                zoom={true}
+                modules={[Autoplay, Pagination, Navigation]}
+                className="mySwiper"
+              >
+                <SwiperSlide><img src={laika1.src} alt="" /></SwiperSlide>
+                <SwiperSlide><img src={laika2.src} alt="" /></SwiperSlide>
+                <SwiperSlide><img src={laika3.src} alt="" /></SwiperSlide>
+              </Swiper>
+            </div>
+            <div className='md:w-2/4 text-center grid gap-5 content-center justify-items-center'>
+              <img src={laikaLogo.src} className="mx-auto" alt="" width={100} />
+              <p className="px-4 md:px-0">Plataforma en línea que ofrece productos y servicios para animales domésticos, como alimentos, juguetes, medicamentos, accesorios, y productos de higiene</p>
+              <b className="px-4 md:px-0">Presentes en Colombia, México y Chile</b>
+              <button className="bg-[#42426f] w-fit p-3 rounded-2xl text-white"><a target={'_blank'} href="https://www.laika.com.co">Visita el sitio web</a></button>
+            </div>
+          </div>
+          <div className='md:flex gap-8 w-full flex-row-reverse mb-10'>
+            <div className='mb-10 md:mb-0 md:w-2/4 content-center'>
+              <Swiper
+                pagination={{
+                  dynamicBullets: true,
+                  clickable: true
+                }}
+                autoplay={{
+                  delay: 4500,
+                  disableOnInteraction: false
+                }}
+                zoom={true}
+                modules={[Autoplay, Pagination, Navigation]}
+                className="mySwiper"
+              >
+                <SwiperSlide><img src={precompro2.src} alt="" /></SwiperSlide>
+                <SwiperSlide><img src={precompro1.src} alt="" /></SwiperSlide>
+                <SwiperSlide><img src={precompro3.src} alt="" /></SwiperSlide>
+              </Swiper>
+            </div>
+            <div className='md:w-2/4 text-center grid gap-5 content-center justify-items-center'>
+              <div className='bg-black p-4 rounded-lg'>
+                <img src={precomproLogo.src} className="mx-auto -mb-2" alt="" width={200} />
+              </div>
+              <p className="px-4 md:px-0">Precompro.com es una plataforma en línea que permite a los usuarios hacer reservas y realizar precompras en diversos restaurantes. A través de esta plataforma, los clientes pueden pagar anticipadamente por productos o servicios antes de que estén disponibles, asegurando su compra.</p>
+              <b className="px-4 md:px-0">Presentes en distintas partes del mundo, activamente en Colombia</b>
+              <button className="bg-[#42426f] w-fit p-3 rounded-2xl text-white"><a target={'_blank'} href="https://marea.precompro.com">Visita el sitio web</a></button>
+            </div>
+          </div>
+          <div className='md:flex gap-8 w-full'>
+            <div className='mb-10 md:mb-0 md:w-2/4 content-center'>
+              <Swiper
+                pagination={{
+                  dynamicBullets: true,
+                  clickable: true
+                }}
+                autoplay={{
+                  delay: 4500,
+                  disableOnInteraction: false
+                }}
+                zoom={true}
+                modules={[Autoplay, Pagination, Navigation]}
+                className="mySwiper"
+              >
+                <SwiperSlide><img src={gigflow1.src} alt="" /></SwiperSlide>
+                <SwiperSlide><img src={gigflow2.src} alt="" /></SwiperSlide>
+              </Swiper>
+            </div>
+            <div className='md:w-2/4 text-center grid gap-5 content-center justify-items-center'>
+              <img src={gigflowLogo.src} className="mx-auto" alt="" width={100} />
+              <p className="px-4 md:px-0">Gigflow es una empresa fundada en 2020 que desarrolla sistemas de automatización inteligente diseñados para freelancers creativos. Su tecnología permite integrar clientes, proyectos y procesos, utilizando bots inteligentes para encontrar, gestionar y automatizar el onboarding de clientes, lo que facilita a los freelancers la administración de su negocio y la aceleración de su crecimiento.</p>
+              <b className="px-4 md:px-0"></b>
+              <button className="bg-[#505052] w-fit p-3 rounded-2xl text-white"><a target={'_blank'} href="https://www.laika.com.co">Sitio web fuera de servicio</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='bg-[#172230] overflow-hidden text-center text-white py-8'>
+        <Link className='inline-flex gap-3 items-center text-2xl' href="https://wa.me/+573154846388"><FontAwesomeIcon icon={faCoffee} className="h-7 blinking-icon"/><span>Más proyectos? Contáctame!</span></Link>
+      </div>
+    </Layout>
   );
-}
+};
+
+export default Home;

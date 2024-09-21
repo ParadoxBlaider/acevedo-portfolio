@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+@import '@/app/fonts/fonts.css';
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+@import 'swiper/swiper-bundle.css';
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f0f19;
+  --headerFooter: #233449;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #f7ffff;
+    --foreground: #0f0f19;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Inria Sans', sans-serif;
+  line-height: 1.6; /* Ideal para el texto de párrafo */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2; /* Ideal para títulos */
+}
+
+
+p {
+  line-height: 1.5; /* Texto de párrafo */
+}
+
+ul, ol {
+  line-height: 1.6; /* Listas */
+}
+
+header {
+  background: var(--headerFooter);
+  color: white;
+  padding: 2rem 100px;
+}
+
+nav {
+  ul{
+    list-style: none;
+    padding: 0;
+  }
+  li{
+
+    display: inline;
+    margin-right: 1rem;
+  }
+}
+main{
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--headerFooter);
+  color: white;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes bannerInfinite {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animation-infinite-axis-x {
+  animation: bannerInfinite 10s linear infinite; // 'ease-in-out' para suavizar las transiciones
+  white-space: nowrap;
+}
+
+.blinking-icon {
+  animation: blink 2s infinite; // Cambia la duración según tus preferencias
+}
+.swiper-wrapper{
+  align-items: center;
+}
+
+/* Estilos para móviles */
+@media (max-width: 767px) {
+  body {
+    .animation-infinite-axis-x {
+      animation: none;
+    }
+  }
+}
+
+/* Estilos para tabletas */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+  }
+}
+
+/* Estilos para escritorio */
+@media (min-width: 1024px) {
+  body {
+  }
+}

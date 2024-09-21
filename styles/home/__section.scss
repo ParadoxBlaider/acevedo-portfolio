@@ -1,0 +1,31 @@
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.section-about-me{
+  text-align: center;
+  display: grid;
+  gap: 10px;
+  h2{
+    font-size: 40px;
+  }
+  p{
+    font-size: 20px;
+  }
+  img.general-flags{
+    display: inline-block; /* Permite que la animación funcione correctamente */
+    animation: wave 1.5s ease-in-out infinite; /* Ajusta la duración y suavidad */
+    transform-origin: center;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+}
