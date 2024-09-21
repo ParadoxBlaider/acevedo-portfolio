@@ -148,7 +148,7 @@ const Home = () => {
               <img src={gigflowLogo.src} className="mx-auto" alt="" width={100} />
               <p className="px-4 md:px-0">Gigflow es una empresa fundada en 2020 que desarrolla sistemas de automatización inteligente diseñados para freelancers creativos. Su tecnología permite integrar clientes, proyectos y procesos, utilizando bots inteligentes para encontrar, gestionar y automatizar el onboarding de clientes, lo que facilita a los freelancers la administración de su negocio y la aceleración de su crecimiento.</p>
               <b className="px-4 md:px-0"></b>
-              <button className="bg-[#505052] w-fit p-3 rounded-2xl text-white"><a target={'_blank'} href="https://www.laika.com.co">Sitio web fuera de servicio</a></button>
+              <button className="bg-[#505052] w-fit p-3 rounded-2xl text-white">Sitio web fuera de servicio</button>
             </div>
           </div>
         </div>
