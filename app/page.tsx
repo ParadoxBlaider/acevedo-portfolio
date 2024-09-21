@@ -7,7 +7,7 @@ import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee, faMailBulk } from '@fortawesome/free-solid-svg-icons';
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faWhatsapp, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 // Laika
 import laika1 from '@/assets/home/laika/laika-1.jpg';
@@ -40,6 +40,9 @@ const Home = () => {
           Trabajo con empresas de todos los sectores, y mi compromiso es transformar tus ideas en soluciones que resalten y conecten con los usuarios. 
           ¡Estoy emocionado de colaborar contigo en tu próximo proyecto!
         </p>
+        <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-300 mx-auto">
+          <img src="https://media.licdn.com/dms/image/v2/C4E03AQHpqGgOqtKdmw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1609887979476?e=1732147200&v=beta&t=PJXSTdbl1uaRRnCIxuaUcBpHhaZNhmxm6IrCv8d4cNk" alt="Avatar" className="w-full h-full object-cover" />
+        </div>
       </section>
       <section className='section-skills'>
         <h2>Habilidades</h2>
@@ -145,6 +148,9 @@ const Home = () => {
           </Link>
           <Link className='inline-flex gap-3 items-center text-2xl' href="mailto:maacevedog2010@gmail.com">
             <FontAwesomeIcon icon={faMailBulk} />
+          </Link>
+          <Link className='inline-flex gap-3 items-center text-2xl' href="https://www.linkedin.com/in/miguel-angel-acevedo-gantiva-b71070203/">
+            <FontAwesomeIcon icon={faLinkedin} />
           </Link>
         </div>
       </section>
