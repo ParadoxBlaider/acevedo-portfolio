@@ -35,7 +35,7 @@ const Home = () => {
         customClassName="pb-10 px-10 lg:px-44 section-about-me"
         title='Desarrollador FrontEnd Colombiano'
         content='
-          Me especializo en el diseño de interfaces, dedicado a crear experiencias visuales que son tanto amigables como atractivas. Utilizando herramientas como Zeppelin, Figma, etc...
+          Con más de 4 años, me especializo en el diseño de interfaces, dedicado a crear experiencias visuales que son tanto amigables como atractivas. Utilizando herramientas como Zeppelin, Figma, etc...
           Me aseguro de que cada proyecto refleje con precisión la visión original.
           Trabajo con empresas de todos los sectores, y mi compromiso es transformar tus ideas en soluciones que resalten y conecten con los usuarios. 
           ¡Estoy emocionado de colaborar contigo en tu próximo proyecto!.
