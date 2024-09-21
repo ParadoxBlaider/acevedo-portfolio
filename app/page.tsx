@@ -26,10 +26,37 @@ import gigflow1 from '@/assets/home/gigflow/gigflow-1.jpg';
 import gigflow2 from '@/assets/home/gigflow/gigflow-2.jpg';
 import gigflowLogo from '@/assets/home/gigflow/gigflow-logo.svg';
 import LogoSkills from '@/components/home/LogoSkills';
+import { useState } from 'react';
 
 
 
 const Home = () => {
+  const [jobs] = useState([
+    {
+      title: 'Laika',
+      logo: laikaLogo.src,
+      description: 'Plataforma en línea que ofrece productos y servicios para animales domésticos...',
+      location: 'Presentes en Colombia, México y Chile',
+      siteLink: 'https://www.laika.com.co',
+      images: [laika1, laika2, laika3],
+    },
+    {
+      title: 'Precompro',
+      logo: precomproLogo.src,
+      description: 'Precompro.com es una plataforma en línea que permite a los usuarios hacer reservas...',
+      location: 'Presentes en distintas partes del mundo, activamente en Colombia',
+      siteLink: 'https://marea.precompro.com',
+      images: [precompro1, precompro2, precompro3],
+    },
+    {
+      title: 'Gigflow',
+      logo: gigflowLogo.src,
+      description: 'Gigflow es una empresa fundada en 2020 que desarrolla sistemas de automatización...',
+      location: 'Plataforma fuera de servicio',
+      siteLink: null, // Indica que el sitio está fuera de servicio
+      images: [gigflow1, gigflow2],
+    },
+  ]);
   return (
     <Layout>
       <section className="section-about-me">
@@ -51,93 +78,51 @@ const Home = () => {
           <LogoSkills />
         </div>
       </section>
-      <section className='section-my-job'>
-        <h2>Mi trabajo</h2>
-        <div className='section-my-job__info'>
-          <div className='section-my-job__info__container'>
-            <div className='section-my-job__info__container__jobs-preview'>
+      <section className="section-my-job">
+      <h2>Mi trabajo</h2>
+      <div className="section-my-job__info">
+        {jobs.map((job, index) => (
+          <div
+            className={`section-my-job__info__container ${
+              index % 2 !== 0 ? 'flex-row-reverse' : ''
+            }`}
+            key={job.title}
+          >
+            <div className="section-my-job__info__container__jobs-preview">
               <Swiper
-                pagination={{
-                  dynamicBullets: true,
-                  clickable: true
-                }}
-                autoplay={{
-                  delay: 4500,
-                  disableOnInteraction: false
-                }}
+                pagination={{ dynamicBullets: true, clickable: true }}
+                autoplay={{ delay: 4500, disableOnInteraction: false }}
                 zoom={true}
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper"
               >
-                <SwiperSlide><img src={laika1.src} alt="" /></SwiperSlide>
-                <SwiperSlide><img src={laika2.src} alt="" /></SwiperSlide>
-                <SwiperSlide><img src={laika3.src} alt="" /></SwiperSlide>
+                {job.images.map((image, i) => (
+                  <SwiperSlide key={i}>
+                    <img src={image.src} alt={`${job.title} image ${i + 1}`} />
+                  </SwiperSlide>
+                ))}
               </Swiper>
             </div>
-            <div className='section-my-job__info__container__jobs-detail'>
-              <img src={laikaLogo.src} className="mx-auto" alt="" width={100} />
-              <p className="px-4 md:px-0">Plataforma en línea que ofrece productos y servicios para animales domésticos, como alimentos, juguetes, medicamentos, accesorios, y productos de higiene</p>
-              <b className="px-4 md:px-0">Presentes en Colombia, México y Chile</b>
-              <button className="bg-[#42426f] w-fit p-3 rounded-2xl text-white"><a target={'_blank'} href="https://www.laika.com.co">Visita el sitio web</a></button>
+            <div className="section-my-job__info__container__jobs-detail">
+              <img src={job.logo} className="mx-auto" alt={`${job.title} logo`} width={100} />
+              <p className="px-4 md:px-0">{job.description}</p>
+              {job.location && <b className="px-4 md:px-0">{job.location}</b>}
+              {job.siteLink ? (
+                <button className="bg-[#42426f] w-fit p-3 rounded-2xl text-white">
+                  <a target="_blank" href={job.siteLink} rel="noopener noreferrer">
+                    Visita el sitio web
+                  </a>
+                </button>
+              ) : (
+                <button className="bg-[#505052] w-fit p-3 rounded-2xl text-white">
+                  Sitio web fuera de servicio
+                </button>
+              )}
             </div>
           </div>
-          <div className='section-my-job__info__container flex-row-reverse'>
-            <div className='section-my-job__info__container__jobs-preview'>
-              <Swiper
-                pagination={{
-                  dynamicBullets: true,
-                  clickable: true
-                }}
-                autoplay={{
-                  delay: 4500,
-                  disableOnInteraction: false
-                }}
-                zoom={true}
-                modules={[Autoplay, Pagination, Navigation]}
-                className="mySwiper"
-              >
-                <SwiperSlide><img src={precompro2.src} alt="" /></SwiperSlide>
-                <SwiperSlide><img src={precompro1.src} alt="" /></SwiperSlide>
-                <SwiperSlide><img src={precompro3.src} alt="" /></SwiperSlide>
-              </Swiper>
-            </div>
-            <div className='section-my-job__info__container__jobs-detail'>
-              <div className='bg-black p-4 rounded-lg'>
-                <img src={precomproLogo.src} className="mx-auto -mb-2" alt="" width={200} />
-              </div>
-              <p className="px-4 md:px-0">Precompro.com es una plataforma en línea que permite a los usuarios hacer reservas y realizar precompras en diversos restaurantes. A través de esta plataforma, los clientes pueden pagar anticipadamente por productos o servicios antes de que estén disponibles, asegurando su compra.</p>
-              <b className="px-4 md:px-0">Presentes en distintas partes del mundo, activamente en Colombia</b>
-              <button className="bg-[#42426f] w-fit p-3 rounded-2xl text-white"><a target={'_blank'} href="https://marea.precompro.com">Visita el sitio web</a></button>
-            </div>
-          </div>
-          <div className='section-my-job__info__container'>
-            <div className='section-my-job__info__container__jobs-preview'>
-              <Swiper
-                pagination={{
-                  dynamicBullets: true,
-                  clickable: true
-                }}
-                autoplay={{
-                  delay: 4500,
-                  disableOnInteraction: false
-                }}
-                zoom={true}
-                modules={[Autoplay, Pagination, Navigation]}
-                className="mySwiper"
-              >
-                <SwiperSlide><img src={gigflow1.src} alt="" /></SwiperSlide>
-                <SwiperSlide><img src={gigflow2.src} alt="" /></SwiperSlide>
-              </Swiper>
-            </div>
-            <div className='section-my-job__info__container__jobs-detail'>
-              <img src={gigflowLogo.src} className="mx-auto" alt="" width={100} />
-              <p className="px-4 md:px-0">Gigflow es una empresa fundada en 2020 que desarrolla sistemas de automatización inteligente diseñados para freelancers creativos. Su tecnología permite integrar clientes, proyectos y procesos, utilizando bots inteligentes para encontrar, gestionar y automatizar el onboarding de clientes, lo que facilita a los freelancers la administración de su negocio y la aceleración de su crecimiento.</p>
-              <b className="px-4 md:px-0"></b>
-              <button className="bg-[#505052] w-fit p-3 rounded-2xl text-white">Sitio web fuera de servicio</button>
-            </div>
-          </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </section>
       <section className='section-contact-me'>
         <div className='text-2xl gap-3 items-center inline-flex'>
           <FontAwesomeIcon icon={faCoffee} className="h-6 blinking-icon"/><span>Más proyectos? Contáctame!</span>
