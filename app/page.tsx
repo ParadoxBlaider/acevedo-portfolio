@@ -68,7 +68,7 @@ const Home = () => {
           ¡Estoy emocionado de colaborar contigo en tu próximo proyecto!
         </p>
         <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-gray-300 mx-auto">
-          <img src="https://media.licdn.com/dms/image/v2/C4E03AQHpqGgOqtKdmw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1609887979476?e=1732147200&v=beta&t=PJXSTdbl1uaRRnCIxuaUcBpHhaZNhmxm6IrCv8d4cNk" alt="Avatar" className="w-full h-full object-cover" />
+          <img src="https://media.licdn.com/dms/image/v2/C4E03AQHpqGgOqtKdmw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1609887979476?e=1749686400&v=beta&t=R3Ok92xfIivXW4nEEbpBooWGsN4wxRaGM59qgfGtFNo" alt="Avatar" className="w-full h-full object-cover" />
         </div>
       </section>
       <section className='section-skills'>
